@@ -8,7 +8,13 @@
         window.onload = function() {
             let newWindow = window.open("about:blank", "_blank");
             if (newWindow) {
-                newWindow.document.write(`<iframe src="https://deadsimplechat.com/NFlUsmyDQ" style="width:100vw; height:100vh; border:none;"></iframe>`);
+                newWindow.document.write(`
+                    <style>
+                        html, body { margin: 0; padding: 0; overflow: hidden; height: 100%; }
+                        iframe { width: 100vw; height: 100vh; border: none; display: block; }
+                    </style>
+                    <iframe src="https://deadsimplechat.com/NFlUsmyDQ"></iframe>
+                `);
                 newWindow.document.close();
             } else {
                 alert("Popup blocked! Allow popups for this site.");
